@@ -1,0 +1,74 @@
+---
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+const PROJECTS = [
+  {
+    title: "Lymbrarie",
+    description:
+      "Biblioteca virtual que permite al usuario llevar un registro ordenado de libros. Facilita el seguimiento y ofrece datos relevantes acerca de sus lecturas.",
+    link: "https://lymbrarie.vercel.app",
+    image: "/lymbrarie-img.webp",
+  },
+  {
+    title: "Algorithmic Market",
+    description:
+      "Plataforma de educación financiera: incursiona en el mundo del trading y aprende valiosas habilidades.",
+    link: "https://algorithmic-market.com",
+    image: "/am-img.webp",
+  },
+  {
+    title: "Lym CLI",
+    description:
+      "CLI desarrollada con Rust que ofrece funcionalidades de traducción de texto, resolución de expresiones matemáticas y más.",
+    link: "https://lym.shuttleapp.rs",
+    image: "/cli-img.webp",
+  },
+  {
+    title: "Image to Link",
+    description:
+      "Genera enlaces de las imágenes que desees fácilmente en segundos. ¡Utilízalos donde quieras!",
+    link: "https://image-to-link.netlify.app",
+    image: "/itl-img.webp",
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16 px-4 sm:px-0">
+  {
+    PROJECTS.map(project => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
+            <img
+              alt="imagen de proyecto"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:group-hover:scale-105"
+              loading="lazy"
+              src={project.image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-100">{project.title}</h3>
+
+          <div class="flex flex-wrap mt-2">
+            <div class="mt-2 text-gray-200">{project.description}</div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              <LinkButton href={project.link}>
+                <Link class="size-4" />
+                URL
+              </LinkButton>
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+
+  <a
+    target="_blank"
+    href="https://github.com/gixilym?tab=repositories"
+    class="text-gray-300 hover:underline cursor-pointer hover:text-white w-full sm:w-max text-center sm:text-start"
+    >Ver más proyectos</a
+  >
+</div>
