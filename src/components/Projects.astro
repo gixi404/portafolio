@@ -1,5 +1,6 @@
 ---
 import Link from "./icons/Link.astro";
+import GitHub from "./icons/GitHub.astro";
 import LinkButton from "./LinkButton.astro";
 const PROJECTS = [
   {
@@ -8,6 +9,7 @@ const PROJECTS = [
       "Biblioteca virtual que permite al usuario llevar un registro ordenado de libros. Facilita el seguimiento y ofrece datos relevantes acerca de sus lecturas.",
     link: "https://lymbrarie.vercel.app",
     image: "/lymbrarie-img.webp",
+    github: "https://github.com/gixilym/lymbrarie",
   },
   {
     title: "Algorithmic Market",
@@ -19,9 +21,10 @@ const PROJECTS = [
   {
     title: "Lym CLI",
     description:
-      "CLI desarrollada con Rust que ofrece funcionalidades de traducción de texto, resolución de expresiones matemáticas y más.",
+      "CLI desarrollada con Rust que ofrece comandos para generar contraseñas, traducir texto, resolver expresiones matemáticas y más.",
     link: "https://lym.netlify.app",
     image: "/cli-img.webp",
+    github: "https://github.com/gixilym/lym-cli",
   },
   {
     title: "Imagen a Link",
@@ -29,6 +32,7 @@ const PROJECTS = [
       "Genera enlaces de las imágenes que desees fácilmente en segundos. ¡Utilízalos donde quieras!",
     link: "https://imagen-a-link.netlify.app",
     image: "/itl-img.webp",
+    github: "https://github.com/gixilym/imagen-a-link",
   },
 ];
 ---
@@ -41,7 +45,7 @@ const PROJECTS = [
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl">
             <img
               alt="imagen de proyecto"
-              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:group-hover:scale-105"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:group-hover:scale-105 border-2 border-gray-600/50 rounded-xl"
               loading="lazy"
               src={project.image}
             />
@@ -53,11 +57,17 @@ const PROJECTS = [
 
           <div class="flex flex-wrap mt-2">
             <div class="mt-2 text-gray-200">{project.description}</div>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
+            <footer class="flex items-end justify-start mt-4 gap-x-2">
               <LinkButton href={project.link}>
                 <Link class="size-4" />
                 URL
               </LinkButton>
+              {project.github && (
+                <LinkButton href={project.github}>
+                  <GitHub class="size-4" />
+                  Código
+                </LinkButton>
+              )}
             </footer>
           </div>
         </div>

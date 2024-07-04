@@ -6,6 +6,11 @@ const navItems = [
     url: "/",
   },
   {
+    title: "Skills",
+    label: "skills",
+    url: "/#skills",
+  },
+  {
     title: "Proyectos",
     label: "proyectos",
     url: "/#proyectos",
@@ -22,12 +27,12 @@ const navItems = [
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium text-white rounded-full justify-center items-center ring-white/10"
+    class="flex px-3 text-sm font-medium text-white rounded-xl justify-center items-center ring-white/10"
   >
     {
       navItems.map(link => (
         <a
-          class="relative block px-2 py-2 transition hover:text-white text-lg text-gray-300"
+          class="relative block px-2 py-2 transition text-lg cursor-pointer"
           aria-label={link.label}
           href={link.url}
         >
@@ -47,7 +52,7 @@ const navItems = [
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 text-white backdrop-blur-md bg-[#6efff1]/50  ring-white/10;
+      @apply shadow-lg ring-1 text-white backdrop-blur-md bg-blue-900 ring-white/10 border-2 border-gray-600/50;
     }
   }
 </style>
