@@ -1,8 +1,8 @@
 ---
 import "@fontsource-variable/onest";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 interface Props {
   title: string;
   description: string;
@@ -23,7 +23,7 @@ const { description, title } = Astro.props;
   </head>
 
   <body
-    class="relative text-white bg-gradient-to-r to-blue-950 via-slate-900 from-slate-950"
+    class="relative text-white bg-gradient-to-r from-slate-950 via-slate-950 to-purple-950"
   >
     <Header />
     <slot />

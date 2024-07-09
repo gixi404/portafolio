@@ -27,7 +27,7 @@ const navItems = [
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium text-white rounded-xl justify-center items-center ring-white/10"
+    class="flex px-3 text-sm font-medium text-white rounded-xl justify-center items-center"
   >
     {
       navItems.map(link => (
@@ -45,14 +45,14 @@ const navItems = [
 
 <style>
   nav {
-    animation: nav-shadown 1s linear both;
+    animation: nav-shadown 0.1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
   }
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 text-white backdrop-blur-md bg-blue-900 ring-white/10 border-2 border-gray-600/50;
+      @apply shadow-lg ring-1 text-white backdrop-blur-md bg-purple-800 ring-white/30 border-2 border-purple-600/50;
     }
   }
 </style>
