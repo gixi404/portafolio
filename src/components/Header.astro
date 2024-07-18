@@ -1,5 +1,5 @@
 ---
-const navItems = [
+const items = [
   {
     title: "Inicio",
     label: "inicio",
@@ -24,19 +24,19 @@ const navItems = [
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 lg:top-36 lg:left-0 z-10 flex items-center justify-center lg:items-start lg:justify-start w-full mt-1"
 >
   <nav
-    class="flex px-3 text-sm font-medium text-white rounded-xl justify-center items-center"
+    class="flex lg:flex-col gap-x-4 sm:gap-x-8 gap-y-4 px-4 lg:px-0 lg:pl-6 rounded-xl justify-center items-center lg:items-start py-1 lg:py-0 bg-purple-800/80 ring-white/30 border-2 border-purple-600/50 lg:border-0 lg:bg-transparent"
   >
     {
-      navItems.map(link => (
+      items.map(l => (
         <a
-          class="relative block px-2 py-2 transition text-lg cursor-pointer"
-          aria-label={link.label}
-          href={link.url}
+          class="block text-lg cursor-pointer text-slate-200 hover:text-white hover:scale-105"
+          aria-label={l.label}
+          href={l.url}
         >
-          {link.title}
+          {l.title}
         </a>
       ))
     }
@@ -44,13 +44,13 @@ const navItems = [
 </header>
 
 <style>
-  nav {
-    animation: nav-shadown 0.1s linear both;
+  .anim {
+    animation: shadown 0.1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
   }
 
-  @keyframes nav-shadown {
+  @keyframes shadown {
     to {
       @apply shadow-lg ring-1 text-white backdrop-blur-md bg-purple-800 ring-white/30 border-2 border-purple-600/50;
     }
