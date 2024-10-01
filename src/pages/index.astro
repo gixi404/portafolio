@@ -4,7 +4,8 @@ import AboutMe from "@/components/AboutMe.astro";
 import CodeIcon from "@/components/icons/Code.astro";
 import SkillsIcon from "@/components/icons/Skills.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
-import Projects from "@/components/Projects.astro";
+import ProjectsFreelance from "@/components/ProjectsFreelance.astro";
+import ProjectsPersonal from "@/components/ProjectsPersonal.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import Skills from "@/components/Skills.astro";
@@ -35,9 +36,19 @@ import Skills from "@/components/Skills.astro";
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-purple-300 px-2 sm:px-0"
       >
         <CodeIcon class="size-9" />
-        Proyectos
+        Proyectos freelance
       </h2>
-      <Projects />
+      <ProjectsFreelance />
+    </SectionContainer>
+
+    <SectionContainer>
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-purple-300 px-2 sm:px-0"
+      >
+        <CodeIcon class="size-9" />
+        Proyectos personales
+      </h2>
+      <ProjectsPersonal />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">

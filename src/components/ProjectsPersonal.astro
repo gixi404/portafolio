@@ -1,6 +1,6 @@
 ---
-import Link from "./icons/Link.astro";
 import GitHub from "./icons/GitHub.astro";
+import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 const PROJECTS = [
   {
@@ -10,13 +10,7 @@ const PROJECTS = [
     link: "https://lymbrarie.com",
     image: "/lymbrarie-img.webp",
   },
-  {
-    title: "Algorithmic Market",
-    description:
-      "Plataforma de educación financiera: incursiona en el mundo del trading y aprende valiosas habilidades.",
-    link: "https://algorithmic-market.com",
-    image: "/am-img.webp",
-  },
+
   {
     title: "Lym CLI",
     description:
@@ -36,7 +30,7 @@ const PROJECTS = [
 ];
 ---
 
-<div class="flex flex-col gap-y-16 px-4 sm:px-0">
+<ul class="flex flex-col gap-y-16 px-4 sm:px-0">
   {
     PROJECTS.map(project => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
@@ -80,4 +74,4 @@ const PROJECTS = [
     class="text-gray-300 hover:underline cursor-pointer hover:text-white w-full sm:w-max text-center sm:text-start"
     >Ver más proyectos</a
   >
-</div>
+</ul>
