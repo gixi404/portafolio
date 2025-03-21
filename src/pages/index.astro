@@ -4,7 +4,6 @@ import AboutMe from "@/components/AboutMe.astro";
 import CodeIcon from "@/components/icons/Code.astro";
 import SkillsIcon from "@/components/icons/Skills.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
-import ProjectsFreelance from "@/components/ProjectsFreelance.astro";
 import ProjectsPersonal from "@/components/ProjectsPersonal.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
@@ -13,7 +12,7 @@ import Skills from "@/components/Skills.astro";
 
 <Layout
   title="Gixi ~ Fullstack Dev"
-  description="Contratame para que trabaje en tu equipo o crear tu aplicación web."
+  description="Tu desarrollador de software favorito"
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
@@ -31,16 +30,6 @@ import Skills from "@/components/Skills.astro";
       <Skills />
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-purple-300 px-2 sm:px-0"
-      >
-        <CodeIcon class="size-9" />
-        Proyectos
-      </h2>
-      <ProjectsPersonal />
-    </SectionContainer>
-
     <SectionContainer id="sobre-mi">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-4 text-purple-300 px-2 sm:px-0"
@@ -49,6 +38,16 @@ import Skills from "@/components/Skills.astro";
         Sobre Mí
       </h2>
       <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-purple-300 px-2 sm:px-0"
+      >
+        <CodeIcon class="size-9" />
+        Proyectos
+      </h2>
+      <ProjectsPersonal />
     </SectionContainer>
   </div>
 </Layout>

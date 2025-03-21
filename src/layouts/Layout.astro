@@ -20,10 +20,8 @@ const { description, title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-
-  <body
-    class="relative text-white bg-gradient-to-r from-slate-950 via-violet-950 to-slate-950"
-  >
+  <!-- bg-gradient-to-r from-slate-950 via-slate-950 to-slate-950 -->
+  <body class="relative text-white bg-transparent">
     <slot />
     <Footer />
     <style is:global>
@@ -37,11 +35,19 @@ const { description, title } = Astro.props;
       }
 
       body {
-        color: rgba(17, 17, 17, 0.9);
         display: flex;
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
+        background-color: #0f172a;
+        background-size: 40px 40px;
+        background-image: repeating-linear-gradient(
+          0deg,
+          #444df730,
+          #444df730 1px,
+          #0f172a 1px,
+          #0f172a
+        );
       }
 
       @media (prefers-reduced-motion: reduce) {
