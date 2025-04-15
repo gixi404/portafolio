@@ -1,0 +1,115 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+const PROJECTS = [
+  {
+    title: "Xiro App",
+    description:
+      "Permite a los estudiantes acceder de manera rápida y sencilla a materiales de estudio impresos, optimizando tiempo y recursos. Distinguida por el Senado de Mendoza por su impacto positivo en la comunidad educativa.",
+    link: "https://xiroapp.com.ar",
+    image: "/xiro-img.webp",
+  },
+  {
+    title: "The Modding Corner",
+    description:
+      "E-commerce especializado en la venta de consolas de videojuegos modificadas, ofreciendo soluciones personalizadas para gamers que buscan expandir las capacidades de sus equipos.",
+    link: "https://themoddingcorner.com",
+    image: "/tmc-img.webp",
+  },
+  {
+    title: "All In Informática",
+    description:
+      "Sitio web informativo para comercio de insumos informáticos y servicios técnico profesional, diseñada para conectar a los usuarios con soluciones tecnológicas.",
+    link: "https://allinlujan.com.ar",
+    image: "/allin-img.webp",
+  },
+  {
+    title: "Lymbrarie",
+    description:
+      "Biblioteca personal que permite al usuario llevar un registro ordenado de sus libros. Facilitando el seguimiento y su progeso como lector.",
+    link: "https://lymbrarie.com",
+    image: "/lymbrarie-img.webp",
+    github: "https://github.com/gixilym/lymbrarie",
+  },
+  {
+    title: "Lym CLI",
+    description:
+      "Herramienta de línea de comandos desarrollada en Rust que integra múltiples utilidades: generador de contraseñas, traductor de texto, calculadora y más funciones para aumentar la productividad.",
+    link: "https://lym.netlify.app",
+    image: "/cli-img.webp",
+    github: "https://github.com/gixilym/lym-cli",
+  },
+  {
+    title: "Pomolym",
+    description:
+      "Programa de productividad para Windows basado en la técnica Pomodoro, con interfaz minimalista y enfocada en maximizar la concentración y eficiencia.",
+    link: "https://pomolym.netlify.app",
+    image: "/pomolym-img.webp",
+    github: "https://github.com/gixilym/pomolym",
+  },
+  {
+    title: "Imagen a Link",
+    description:
+      "Herramienta web que simplifica la conversión de imágenes en URLs compartibles, facilitando la integración de recursos visuales en diferentes plataformas y proyectos.",
+    link: "https://imagen-a-link.netlify.app",
+    image: "/ial-img.webp",
+    github: "https://github.com/gixilym/imagen-a-link",
+  },
+  {
+    title: "Atajos para caracteres especiales",
+    description:
+      "Extensión para Visual Studio Code que permite insertar caracteres especiales mediante atajos de teclado, ideal para desarrolladores con teclados limitados o dañados.",
+    link: "https://marketplace.visualstudio.com/items?itemName=Atajosdecaracteresespeciales.caracteres-especiales-atajos",
+    image: "/atajos-img.webp",
+    github: "https://github.com/gixilym/atajos-extension-vsc",
+  },
+];
+---
+
+<ul class="flex flex-col gap-y-16 px-4 sm:px-0">
+  {
+    PROJECTS.map(project => (
+      <article class="flex h-full flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2 h-full">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl">
+            <img
+              alt={`Imagen de ${project.title}`}
+              class="object-cover object-top w-full h-60 transition duration-500 border-2 border-gray-600/50 rounded-xl"
+              loading="lazy"
+              src={project.image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full h-full md:w-1/2 md:max-w-lg">
+          <p class="text-2xl font-bold text-gray-100">{project.title}</p>
+
+          <div class="flex flex-wrap mt-2">
+            <div class="mt-2 text-gray-200">{project.description}</div>
+            <footer class="flex items-end justify-start mt-4 gap-x-2">
+              <LinkButton href={project.link}>
+                <Link class="size-4" />
+                URL
+              </LinkButton>
+              {project.github && (
+                <LinkButton href={project.github}>
+                  <GitHub class="size-4" />
+                  Repositorio
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+
+  <a
+    rel="noopener noreferrer"
+    target="_blank"
+    href="https://github.com/gixilym?tab=repositories"
+    class="text-gray-300 hover:underline cursor-pointer hover:text-white w-full sm:w-max text-center sm:text-start"
+    >&gt;&nbsp;Ver más proyectos</a
+  >
+</ul>
