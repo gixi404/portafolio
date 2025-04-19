@@ -3,16 +3,18 @@ import Layout from "@/layouts/Layout.astro";
 import AboutMe from "@/components/AboutMe.astro";
 import CodeIcon from "@/components/icons/Code.astro";
 import SkillsIcon from "@/components/icons/Skills.astro";
+import ToolsIcon from "@/components/icons/Tools.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
 import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import Skills from "@/components/Skills.astro";
+import Tools from "@/components/Tools.astro";
 ---
 
 <Layout
   title="Gixi ~ Fullstack Dev"
-  description="Tu desarrollador de software favorito"
+  description="Desarrollador de Software Fullstack"
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
@@ -28,6 +30,16 @@ import Skills from "@/components/Skills.astro";
         Tecnologías
       </h2>
       <Skills />
+    </SectionContainer>
+
+    <SectionContainer id="tools">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-purple-300 px-2 sm:px-0"
+      >
+        <ToolsIcon class="size-9" />
+        Herramientas
+      </h2>
+      <Tools />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
