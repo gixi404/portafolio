@@ -1,0 +1,23 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const experience = [
+  {
+    date: "2024 - Actualmente",
+    title: "Freelance Frontend Developer",
+    company: "Lym Software",
+    description:
+      "Creación y mantenimiento de interfaces de usuario responsivas y accesibles. Optimización de rendimiento, mejorando tiempos de carga y la eficiencia. Integración con APIs para consumir datos en tiempo real. Desarrollo de programas para Windows empleando Tauri.",
+    link: "https://lym.software",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    experience.map(e => (
+      <li>
+        <ExperienceItem {...e} />
+      </li>
+    ))
+  }
+</ol>
