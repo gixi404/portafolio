@@ -23,15 +23,19 @@ const { title, company, description, link, date } = Astro.props;
     <p class="text-2xl font-bold text-violet-100 w-full">
       {title}
     </p>
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="font-semibold text-lg text-violet-50/80 transition-colors hover:text-violet-50 flex justify-center items-center gap-x-1.5 mb-0.5"
-    >
-      <LinkIcon class="w-3.5 h-3.5 opacity-85" />
-      {company}
-    </a>
+    {
+      link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-semibold text-lg text-violet-50/80 transition-colors hover:text-violet-50 flex justify-center items-center gap-x-1.5 mb-0.5"
+        >
+          <LinkIcon class="w-3.5 h-3.5 opacity-85" />
+          {company}
+        </a>
+      )
+    }
     <time class="p-0 m-0 text-sm text-violet-50/80">{date}</time>
   </div>
   <div
