@@ -9,20 +9,34 @@ const PROJECTS = [
       "Permite a los estudiantes acceder de manera rápida y sencilla a materiales de estudio impresos, optimizando tiempo y recursos. Distinguida por el Senado de Mendoza por su impacto positivo en la comunidad educativa.",
     link: "https://xiroapp.com.ar",
     image: "/xiro-img.webp",
+    type: "client",
+  },
+  {
+    title: "Capital Credit",
+    description:
+      "Web corporativa que ofrece créditos personales de forma accesible y rápida. Completa la solicitud en minutos y recibir una respuesta sin necesidad de trámites presenciales.",
+    link: "https://www.capitalcredit.com.ar",
+    github: "https://github.com/gixi404/capital-credit",
+    image: "/capital-credit.webp",
+    type: "client",
   },
   {
     title: "The Modding Corner",
     description:
       "E-commerce especializado en la venta de consolas de videojuegos modificadas, ofreciendo soluciones personalizadas para gamers que buscan expandir las capacidades de sus equipos.",
     link: "https://themoddingcorner.com",
+    github: "https://github.com/gixi404/the-modding-corner",
     image: "/tmc-img.webp",
+    type: "client",
   },
   {
     title: "All In Informática",
     description:
       "Sitio web informativo para comercio de insumos informáticos y servicios técnico profesional, diseñada para conectar a los usuarios con soluciones tecnológicas.",
     link: "https://allinlujan.com.ar",
+    github: "https://github.com/gixi404/allin-front",
     image: "/allin-img.webp",
+    type: "client",
   },
   {
     title: "Lymbrarie",
@@ -31,7 +45,17 @@ const PROJECTS = [
     link: "https://lymbrarie.com",
     image: "/lymbrarie-img.webp",
     github: "https://github.com/gixi404/lymbrarie",
+    type: "personal",
   },
+  // {
+  //   title: "Lyra",
+  //   description:
+  //     " Programa de escritorio para escribir sin distracciones con una interfaz ideal para quienes disfrutan de la escritura enfocada. Disponible en Windows, Linux y macOS.",
+  //   link: "https://lymbrarie.com",
+  //   image: "/lyra-img.webp",
+  //   github: "https://github.com/gixi404/lyra",
+  //   type: "personal",
+  // },
 ];
 ---
 
@@ -51,7 +75,20 @@ const PROJECTS = [
         </div>
 
         <div class="w-full h-full md:w-1/2 md:max-w-lg">
-          <p class="text-2xl font-bold text-gray-100">{project.title}</p>
+          <div class="flex items-center gap-2">
+            <p class="text-2xl font-bold text-gray-100">{project.title}</p>
+            <span
+              class={`px-2 py-1 text-xs font-medium rounded-full border-2 border-violet-400/15 ${
+                project.type == "client"
+                  ? "bg-blue-100 text-blue-800"
+                  : "bg-purple-100 text-purple-800"
+              }`}
+            >
+              {project.type == "client"
+                ? "Trabajo freelance"
+                : "Proyecto personal"}
+            </span>
+          </div>
 
           <div class="flex flex-wrap mt-2">
             <div class="mt-2 text-gray-200">{project.description}</div>
