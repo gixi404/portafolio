@@ -2,6 +2,7 @@
 import CVIcon from "@/components/icons/CV.astro";
 import GitHubIcon from "@/components/icons/GitHub.astro";
 import MailIcon from "./icons/Mail.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
 ---
 
 <div class="max-w-xl relative">
@@ -17,7 +18,7 @@ import MailIcon from "./icons/Mail.astro";
     <div
       class="flex flex-col items-start justify-center gap-y-2 brightness-125"
     >
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-1.5">
         <h1
           class="text-4xl font-normal tracking-tight sm:text-4xl text-white [&>span]:text-purple-400"
         >
@@ -27,7 +28,7 @@ import MailIcon from "./icons/Mail.astro";
       <h2
         class="text-5xl font-bold tracking-tight bg-gradient-to-r from-purple-400 via-purple-200 to-white bg-clip-text text-transparent"
       >
-        Fullstack Dev
+        Full Stack Dev
       </h2>
     </div>
     <div
@@ -59,7 +60,7 @@ import MailIcon from "./icons/Mail.astro";
       target="_blank"
       rel="noopener noreferrer"
       role="link"
-      class="bg-orange-500/50 inline-flex items-center justify-center gap-2 px-4 py-1 transition border rounded-xl border-gray-600 text-white text-md hover:bg-orange-500/80 group max-w-fit hover:text-white"
+      class="bg-orange-500/50 inline-flex items-center justify-center gap-1.5 px-2 py-1 transition border rounded-xl border-gray-600 text-white text-md hover:bg-orange-500/80 group max-w-fit hover:text-white"
     >
       <CVIcon class="size-7" />
       Curriculum
@@ -69,7 +70,7 @@ import MailIcon from "./icons/Mail.astro";
       target="_blank"
       rel="noopener noreferrer"
       role="link"
-      class="bg-violet-700/80 inline-flex items-center justify-center gap-2 px-4 py-[5.2px] transition border rounded-xl border-violet-600 text-white text-md hover:bg-violet-600 hover:border-violet-700 group max-w-fit hover:text-white"
+      class="bg-violet-700/80 inline-flex items-center justify-center gap-1.5 px-2 py-[5.2px] transition border rounded-xl border-violet-600 text-white text-md hover:bg-violet-600 hover:border-violet-700 group max-w-fit hover:text-white"
     >
       <GitHubIcon class="size-5" />
       GitHub
@@ -79,10 +80,20 @@ import MailIcon from "./icons/Mail.astro";
       target="_blank"
       rel="noopener noreferrer"
       role="link"
-      class="bg-rose-500/70 inline-flex items-center justify-center gap-2 px-4 py-1 transition border rounded-xl border-rose-500/30 text-white text-md hover:bg-rose-500/90 hover:border-rose-500 group max-w-fit hover:text-white"
+      class="bg-rose-500/70 inline-flex items-center justify-center gap-1.5 px-2 py-1 transition border rounded-xl border-rose-500/30 text-white text-md hover:bg-rose-500/90 hover:border-rose-500 group max-w-fit hover:text-white"
     >
       <MailIcon class="size-5" />
       gixi.tsx@gmail.com
+    </a>
+    <a
+      href="https://www.linkedin.com/in/gixi"
+      target="_blank"
+      rel="noopener noreferrer"
+      role="link"
+      class="bg-sky-500/70 inline-flex items-center justify-center gap-1.5 px-2 py-1 transition border rounded-xl border-sky-500/30 text-white text-md hover:bg-sky-500/90 hover:border-sky-500 group max-w-fit hover:text-white"
+    >
+      <LinkedInIcon class="size-5" />
+      LinkedIn
     </a>
   </nav>
 </div>
