@@ -13,12 +13,53 @@ import Tailwind from "@/svgs/Tailwind.astro";
 import TypeScript from "@/svgs/TypeScript.astro";
 import Tauri from "@/svgs/Tauri.astro";
 import Playwright from "@/svgs/Playwright.astro";
+import AI from "@/svgs/AI.astro";
+import OpenCode from "@/svgs/OpenCode.astro";
+import Claude from "@/svgs/Claude.astro";
+import Codex from "@/svgs/Codex.astro";
+import Cursor from "@/svgs/Cursor.astro";
+import Copilot from "@/svgs/Copilot.astro";
 ---
 
 <div
   class="flex flex-wrap justify-start items-center gap-8 mt-8 px-4 sm:px-0 max-w-[700px]"
 >
   <div class="w-full flex justify-start items-center gap-8 flex-wrap">
+    <div
+      class="flex flex-col items-center bg-gray-800 p-4 rounded-lg md:gap-y-1 w-[85px] h-[85px] md:w-[100px] md:h-[100px] justify-center"
+    >
+      <OpenCode class="w-9 h-9" />
+      <span class="mt-2 text-xs md:text-sm text-white">OpenCode</span>
+    </div>
+
+    <div
+      class="flex flex-col items-center bg-gray-800 p-4 rounded-lg md:gap-y-1 w-[85px] h-[85px] md:w-[100px] md:h-[100px] justify-center"
+    >
+      <Claude class="w-9 h-9" />
+      <span class="mt-2 text-xs md:text-sm text-white">Claude</span>
+    </div>
+
+    <div
+      class="flex flex-col items-center bg-gray-800 p-4 rounded-lg md:gap-y-1 w-[85px] h-[85px] md:w-[100px] md:h-[100px] justify-center"
+    >
+      <Cursor class="w-7 h-7" />
+      <span class="mt-4 text-xs md:text-sm text-white">Cursor</span>
+    </div>
+
+    <div
+      class="flex flex-col items-center bg-gray-800 p-2 rounded-lg md:gap-y-1 w-[85px] h-[85px] md:w-[100px] md:h-[100px] justify-center"
+    >
+      <Copilot class="w-7 h-7" />
+      <span class="mt-4 text-[10px] md:text-xs text-white">GitHub Copilot</span>
+    </div>
+
+    <div
+      class="flex flex-col items-center bg-gray-800 p-4 rounded-lg md:gap-y-1 w-[85px] h-[85px] md:w-[100px] md:h-[100px] justify-center"
+    >
+      <Codex class="w-9 h-9" />
+      <span class="mt-2 text-xs md:text-sm text-white">Codex</span>
+    </div>
+
     <div
       class="flex flex-col items-center bg-gray-800 p-4 rounded-lg md:gap-y-1 w-[85px] h-[85px] md:w-[100px] md:h-[100px] justify-center"
     >
@@ -123,5 +164,6 @@ import Playwright from "@/svgs/Playwright.astro";
       <Playwright />
       <span class="mt-2 text-xs md:text-sm text-white">Playwright</span>
     </div>
+
   </div>
 </div>
